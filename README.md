@@ -1,0 +1,2 @@
+# MiniBank
+ eXtremeProgramming

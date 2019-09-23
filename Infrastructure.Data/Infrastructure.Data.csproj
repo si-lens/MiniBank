@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MiniBank.Core.Entities\MiniBank.Core.Entities.csproj" />
+    <ProjectReference Include="..\MiniBank.Core\MiniBank.Core.csproj" />
+  </ItemGroup>
+
+</Project>
