@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
 {
-    class CustomerService : ICustomerService
+    public class CustomerService : ICustomerService
     {
         private readonly ICustomerRepository customerRepo;
 
@@ -19,7 +19,7 @@ namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
             throw new NotImplementedException();
         }
 
-        public Customer CreateCustomer()
+        public Customer CreateCustomer(Customer customer)
         {
             throw new NotImplementedException();
         }
@@ -39,7 +39,12 @@ namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
             throw new NotImplementedException();
         }
 
-        public void RemoveCustomer(Customer customer)
+        public Customer Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Customer Update(Customer customer)
         {
             throw new NotImplementedException();
         }

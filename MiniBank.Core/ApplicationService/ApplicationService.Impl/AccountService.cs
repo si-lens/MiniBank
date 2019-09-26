@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
 {
-    class AccountService : IAccountService
+    public class AccountService : IAccountService
     {
         private readonly IAccountRepository accountRepo;
 

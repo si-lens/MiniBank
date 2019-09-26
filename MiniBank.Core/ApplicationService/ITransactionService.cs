@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MiniBank.Core.ApplicationService
 {
-    interface ITransactionService
+    public interface ITransactionService
     {
         ITransaction CreateTransaction();
         void RemoveTransaction(ITransaction customer);
