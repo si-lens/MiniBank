@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Infrastructure.Data;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MiniBank.Core.ApplicationService;
@@ -24,14 +26,15 @@ namespace MiniBank.UI.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            /*if (Environment.IsDevelopment())
+            if (Enviroment.IsDevelopment())
             {
-                services.AddDbContext<PetShopAppContext>(
+                services.AddDbContext<MiniBankContext>(
                       opt =>
                       {
-                          opt.UseSqlite("Data Source=PetShopSQLite.db");
+                          opt.UseSqlite("Data Source=MiniBankSQLite.db");
                       });
             }
+            /*
             else
             {
                 // Azure SQL database:
@@ -56,6 +59,11 @@ namespace MiniBank.UI.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                using( var scope = app.ApplicationServices.CreateScope())
+                {
+                    var ctx = scope.ServiceProvider.GetService<MiniBankContext>();
+                    DbSeeder.Seed(ctx);
+                }
             }
             else
             {
