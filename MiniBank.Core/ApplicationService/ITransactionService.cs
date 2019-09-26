@@ -5,10 +5,10 @@ namespace MiniBank.Core.ApplicationService
 {
     public interface ITransactionService
     {
-        ITransaction CreateTransaction();
-        void RemoveTransaction(ITransaction customer);
-        void AddTransactionToAccount(IAccountBank account,ITransaction transaction);
-        void RemoveTransactionFromAccount(IAccountBank account, ITransaction transaction);
+        ITransaction CreateTransaction(ITransaction transaction);
+        ITransaction RemoveTransaction(ITransaction customer);
+        ITransaction AddTransactionToAccount(IAccountBank account,ITransaction transaction);
+        ITransaction RemoveTransactionFromAccount(IAccountBank account, ITransaction transaction);
         List<ITransaction> GetAllTransactions();
     }
 }

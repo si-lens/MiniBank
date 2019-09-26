@@ -6,9 +6,9 @@ namespace MiniBank.Core.ApplicationService
     public  interface ICustomerService
     {
         Customer CreateCustomer(Customer customer);
-        Customer Delete(int id);
-        void AddBankAccountToCustomer(IAccountBank account);
-        void RemoveBankAccountFromCustomer(IAccountBank account);
+        Customer Delete(Customer customer);
+        Customer AddBankAccountToCustomer(IAccountBank account , Customer customer);
+        Customer RemoveBankAccountFromCustomer(IAccountBank account, Customer customer);
         List<Customer> GetAllCustomers();
         Customer GetCustomerWithID(int id);
         Customer Update(Customer customer);

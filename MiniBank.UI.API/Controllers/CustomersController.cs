@@ -32,7 +32,7 @@ namespace MiniBank.UI.API.Controllers
         public ActionResult<IEnumerable<Customer>> Get()
         {
             var customers = _customerService.GetAllCustomers();
-            if (customers == null || customers.Count < 1)
+            if (customers == null)
                 return StatusCode(404, "Customer table is empty");
             return Ok(customers);
         }
@@ -85,11 +85,13 @@ namespace MiniBank.UI.API.Controllers
         [HttpDelete("{id}")]
         public ActionResult<Customer> Delete(int id)
         {
-            var customer = _customerService.Delete(id);
+            var customer = _customerService.GetCustomerWithID(id);
             if (customer == null)
                 return StatusCode(404, $"Customer with id {id} does not exist");
+            else
+               return _customerService.Delete(customer);
 
-            return NoContent();
+            
         }
     }
 }

@@ -2,6 +2,7 @@
 using MiniBank.Core.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
 {
@@ -14,34 +15,31 @@ namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
             this.transactionRepo = transactionRepo;
         }
 
-        public void AddTransactionToAccount(IAccountBank account, ITransaction transaction)
+        public ITransaction AddTransactionToAccount(IAccountBank account, ITransaction transaction)
         {
-            throw new NotImplementedException();
+            return transactionRepo.AddTransactionToAccount(account, transaction);
         }
 
-        public ITransaction CreateTransaction()
+        public ITransaction CreateTransaction(ITransaction transaction)
         {
-            throw new NotImplementedException();
+            return transactionRepo.CreateTransaction(transaction);
         }
 
         public List<ITransaction> GetAllTransactions()
         {
-            throw new NotImplementedException();
+            return transactionRepo.GetAllTransactions().ToList();
         }
 
-        public void RemoveCustomer(ITransaction customer)
+   
+
+        public ITransaction RemoveTransaction(ITransaction transaction)
         {
-            throw new NotImplementedException();
+            return transactionRepo.RemoveTransaction(transaction);
         }
 
-        public void RemoveTransaction(ITransaction customer)
+        public ITransaction RemoveTransactionFromAccount(IAccountBank account, ITransaction transaction)
         {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveTransactionFromAccount(IAccountBank account, ITransaction transaction)
-        {
-            throw new NotImplementedException();
+            return transactionRepo.RemoveTransactionFromAccount(account, transaction);
         }
     }
 }

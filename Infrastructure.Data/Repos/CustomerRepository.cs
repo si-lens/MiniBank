@@ -6,17 +6,17 @@ namespace Infrastructure.Data.Repos
 {
     class CustomerRepository : ICustomerRepository
     {
-        public void AddBankAccountToCustomer(IAccountBank account)
+        public Customer AddBankAccountToCustomer(IAccountBank account, Customer customer)
         {
             throw new NotImplementedException();
         }
 
-        public Customer CreateCustomer()
+        public Customer CreateCustomer(Customer customer)
         {
             throw new NotImplementedException();
         }
 
-        public List<Customer> GetAllCustomers()
+        public IEnumerable<Customer> GetAllCustomers()
         {
             throw new NotImplementedException();
         }
@@ -26,14 +26,18 @@ namespace Infrastructure.Data.Repos
             throw new NotImplementedException();
         }
 
-        public void RemoveBankAccountFromCustomer(IAccountBank account)
-        {
+        public Customer RemoveBankAccountFromCustomer(IAccountBank account, Customer customer)
+        { 
             throw new NotImplementedException();
         }
 
-        public void RemoveCustomer(Customer customer)
+        public Customer RemoveCustomer(Customer customer)
         {
             throw new NotImplementedException();
+        }
+        public Customer UpdateCustomer(Customer customer)
+        {
+            return null;
         }
     }
 }
