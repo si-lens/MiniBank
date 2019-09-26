@@ -7,8 +7,8 @@ namespace MiniBank.Core.ApplicationService
     {
         Customer CreateCustomer(Customer customer);
         Customer Delete(Customer customer);
-        Customer AddBankAccountToCustomer(IAccountBank account , Customer customer);
-        Customer RemoveBankAccountFromCustomer(IAccountBank account, Customer customer);
+        Customer AddBankAccountToCustomer(Account account , Customer customer);
+        Customer RemoveBankAccountFromCustomer(Account account, Customer customer);
         List<Customer> GetAllCustomers();
         Customer GetCustomerWithID(int id);
         Customer Update(Customer customer);

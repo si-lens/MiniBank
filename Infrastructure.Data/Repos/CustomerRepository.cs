@@ -6,7 +6,7 @@ namespace Infrastructure.Data.Repos
 {
     class CustomerRepository : ICustomerRepository
     {
-        public Customer AddBankAccountToCustomer(IAccountBank account, Customer customer)
+        public Customer AddBankAccountToCustomer(Account account, Customer customer)
         {
             throw new NotImplementedException();
         }
@@ -26,7 +26,7 @@ namespace Infrastructure.Data.Repos
             throw new NotImplementedException();
         }
 
-        public Customer RemoveBankAccountFromCustomer(IAccountBank account, Customer customer)
+        public Customer RemoveBankAccountFromCustomer(Account account, Customer customer)
         { 
             throw new NotImplementedException();
         }

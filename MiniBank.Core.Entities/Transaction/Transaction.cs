@@ -4,8 +4,9 @@ using System.Text;
 
 namespace MiniBank.Core.Entities
 {
-    public interface ITransaction
+    public class Transaction
     {
+        public enum TransactionType { Deposit, Loan, Transfer, Withdrawal };
         int Id { get; set; }
         DateTime Date {get; set;}
 

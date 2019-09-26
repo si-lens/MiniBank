@@ -13,9 +13,17 @@ namespace MiniBank.Core.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
-        public List<IAccountBank> Accounts { get; set; }       
+        public List<Account> Accounts { get; set; }    
+        
+        private Customer(Account account)
+        {
+            if (account == null)
+                throw new ArgumentNullException("Customer.Create : Account can't be null");
+            Accounts = new List<Account>();
+            Accounts.Add(account);
+        }
 
-        public Customer(int id,string firstname, string lastname, DateTime birthdate, string email,string phonenumber,string address)
+       /* public Customer(int id,string firstname, string lastname, DateTime birthdate, string email,string phonenumber,string address)
         {
             Id = id;
             FirstName = firstname;
@@ -25,7 +33,7 @@ namespace MiniBank.Core.Entities
             PhoneNumber = phonenumber;
             Address = address;
             Accounts = new List<IAccountBank>();
-        }
+        }*/
 
     }
 }

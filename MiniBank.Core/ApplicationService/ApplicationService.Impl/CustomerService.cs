@@ -15,7 +15,7 @@ namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
             this.customerRepo = customerRepo;
         }
 
-        public Customer AddBankAccountToCustomer(IAccountBank account, Customer customer)
+        public Customer AddBankAccountToCustomer(Account account, Customer customer)
         {
             return customerRepo.AddBankAccountToCustomer(account, customer);
         }
@@ -34,7 +34,7 @@ namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
         {
             return customerRepo.GetCustomerWithID(id);
         }
-        public Customer RemoveBankAccountFromCustomer(IAccountBank account, Customer customer)
+        public Customer RemoveBankAccountFromCustomer(Account account, Customer customer)
         {
             return customerRepo.RemoveBankAccountFromCustomer(account, customer);
         }

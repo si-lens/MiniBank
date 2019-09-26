@@ -5,11 +5,11 @@ namespace MiniBank.Core.DomainService
 { 
     public interface IAccountRepository 
 {
-    IAccountBank CreateAccount(Customer customer);
-    IAccountBank RemoveAccount(IAccountBank account);
-    IAccountBank AddCustomerToBankAccount(IAccountBank account, Customer customer);
-    IAccountBank RemoveCustomerFromBankAccount(IAccountBank account, Customer customer);
-    IEnumerable<IAccountBank> GetAllAccounts();
-    IAccountBank GetAccountWithID(int id);
+    Account CreateAccount(Customer customer);
+    Account RemoveAccount(Account account);
+    Account AddCustomerToBankAccount(Account account, Customer customer);
+    Account RemoveCustomerFromBankAccount(Account account, Customer customer);
+    IEnumerable<Account> GetAllAccounts();
+    Account GetAccountWithID(int id);
 }
 }

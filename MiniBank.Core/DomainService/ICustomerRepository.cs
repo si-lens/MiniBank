@@ -7,8 +7,8 @@ namespace MiniBank.Core.DomainService
     {
         Customer CreateCustomer(Customer customer);
         Customer RemoveCustomer(Customer customer);
-        Customer AddBankAccountToCustomer(IAccountBank account, Customer customer);
-        Customer RemoveBankAccountFromCustomer(IAccountBank account, Customer customer);
+        Customer AddBankAccountToCustomer(Account account, Customer customer);
+        Customer RemoveBankAccountFromCustomer(Account account, Customer customer);
         IEnumerable<Customer> GetAllCustomers();
         Customer GetCustomerWithID(int id);
 

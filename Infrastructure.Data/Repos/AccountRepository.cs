@@ -7,32 +7,32 @@ namespace Infrastructure.Data.Repos
 {
     class AccountRepository : IAccountRepository
     {
-        public void AddOwnerToBankAccount(IAccountBank account, Customer owner)
+        public Account AddCustomerToBankAccount(Account account, Customer customer)
         {
             throw new NotImplementedException();
         }
 
-        public IAccountBank CreateAccount(Customer owner, double initialBalance = 0, double initialInterestRate = 0)
+        public Account CreateAccount(Customer customer)
         {
             throw new NotImplementedException();
         }
 
-        public IAccountBank GetAccountWithID(int id)
+        public Account GetAccountWithID(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<IAccountBank> GetAllAccounts()
+        public IEnumerable<Account> GetAllAccounts()
         {
             throw new NotImplementedException();
         }
 
-        public void RemoveAccount(IAccountBank account)
+        public Account RemoveAccount(Account account)
         {
             throw new NotImplementedException();
         }
 
-        public void RemoveOwnerFromBankAccount(IAccountBank account, Customer owner)
+        public Account RemoveCustomerFromBankAccount(Account account, Customer customer)
         {
             throw new NotImplementedException();
         }

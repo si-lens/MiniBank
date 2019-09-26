@@ -14,19 +14,19 @@ namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
             this.accountRepo = accountRepo;
         }
 
-        public IAccountBank AddCustomerToBankAccount(IAccountBank account, Customer customer)
+        public Account AddCustomerToBankAccount(Account account, Customer customer)
         {
             return accountRepo.AddCustomerToBankAccount(account, customer);
         }
 
 
 
-        public IAccountBank CreateAccount(Customer customer)
+        public Account CreateAccount(Customer customer)
         {
             return accountRepo.CreateAccount(customer);
         }
 
-        public IAccountBank GetAccountWithID(int id)
+        public Account GetAccountWithID(int id)
         {
             return accountRepo.GetAccountWithID(id);
         }
@@ -36,17 +36,17 @@ namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
 
 
 
-        IEnumerable<IAccountBank> IAccountService.GetAllAccounts()
+        IEnumerable<Account> IAccountService.GetAllAccounts()
         {
             return accountRepo.GetAllAccounts();
         }
 
-        IAccountBank IAccountService.RemoveAccount(IAccountBank accountToRemove)
+        Account IAccountService.RemoveAccount(Account accountToRemove)
         {
             return accountRepo.RemoveAccount(accountToRemove);
         }
 
-        IAccountBank IAccountService.RemoveOwnerFromBankAccount(IAccountBank account, Customer owner)
+        Account IAccountService.RemoveOwnerFromBankAccount(Account account, Customer owner)
         {
             throw new NotImplementedException();
         }

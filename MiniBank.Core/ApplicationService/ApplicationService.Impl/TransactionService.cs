@@ -15,29 +15,29 @@ namespace MiniBank.Core.ApplicationService.ApplicationService.Impl
             this.transactionRepo = transactionRepo;
         }
 
-        public ITransaction AddTransactionToAccount(IAccountBank account, ITransaction transaction)
+        public Transaction AddTransactionToAccount(Account account, Transaction transaction)
         {
             return transactionRepo.AddTransactionToAccount(account, transaction);
         }
 
-        public ITransaction CreateTransaction(ITransaction transaction)
+        public Transaction CreateTransaction(Transaction transaction)
         {
             return transactionRepo.CreateTransaction(transaction);
         }
 
-        public List<ITransaction> GetAllTransactions()
+        public List<Transaction> GetAllTransactions()
         {
             return transactionRepo.GetAllTransactions().ToList();
         }
 
    
 
-        public ITransaction RemoveTransaction(ITransaction transaction)
+        public Transaction RemoveTransaction(Transaction transaction)
         {
             return transactionRepo.RemoveTransaction(transaction);
         }
 
-        public ITransaction RemoveTransactionFromAccount(IAccountBank account, ITransaction transaction)
+        public Transaction RemoveTransactionFromAccount(Account account, Transaction transaction)
         {
             return transactionRepo.RemoveTransactionFromAccount(account, transaction);
         }

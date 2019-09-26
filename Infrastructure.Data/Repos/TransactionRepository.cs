@@ -6,27 +6,27 @@ namespace Infrastructure.Data.Repos
 {
     class TransactionRepository : ITransactionRepository
     {
-        public ITransaction AddTransactionToAccount(IAccountBank account, ITransaction transaction)
+        public Transaction AddTransactionToAccount(Account account, Transaction transaction)
         {
             throw new NotImplementedException();
         }
 
-        public ITransaction CreateTransaction(ITransaction transaction)
+        public Transaction CreateTransaction(Transaction transaction)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ITransaction> GetAllTransactions()
+        public IEnumerable<Transaction> GetAllTransactions()
         {
             throw new NotImplementedException();
         }
 
-        public ITransaction RemoveTransaction(ITransaction transaction)
+        public Transaction RemoveTransaction(Transaction transaction)
         {
             throw new NotImplementedException();
         }
 
-        public ITransaction RemoveTransactionFromAccount(IAccountBank account, ITransaction transaction)
+        public Transaction RemoveTransactionFromAccount(Account account, Transaction transaction)
         {
             throw new NotImplementedException();
         }
