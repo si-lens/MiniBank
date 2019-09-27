@@ -6,19 +6,31 @@ namespace MiniBank.Core.Entities
 {
    public class Account
     {
-        int AccountNumber { get; set; }
-        double InterestRate { get; set; }
-        double Balance { get; set; }
-        List<Transaction> Transactions { get; set; }
+        public const double DEFAULT_INTEREST_RATE = 0.01;
+        public const double LOW_INTEREST_RATE = 0.00;
+        public const double HIGT_INTEREST_RATE = 0.10;
 
-        List<Customer> Customers { get; }
+        public int AccountNumber { get; set; }
+        public double InterestRate { get; set; }
+        public double Balance { get; set; }
+         public List<Transaction> Transactions { get; set; }
+        public ICollection<CustomersAccounts> customersAccounts { get; set; }
 
-        public Account(Customer customer)
+        //public List<Customer> Customers { get; }
+
+        public Account(int accountNumber, double balance, double interestRate = DEFAULT_INTEREST_RATE)
         {
-            if (customer == null)
-                throw new ArgumentNullException("Account creation customer argument is null");
-            Customers = new List<Customer>();
-            Customers.Add(customer);
+            AccountNumber = accountNumber;
+            InterestRate = interestRate;
+            Balance = balance;
+            var newCus = new Customer(this);
+            CustomersAccounts cs = new CustomersAccounts()
+            {
+                customer = newCus,
+                customerID = newCus.Id
+            };
+            customersAccounts = new List<CustomersAccounts>();
+            customersAccounts.Add(cs);
         }
         
     }

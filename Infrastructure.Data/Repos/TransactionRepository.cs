@@ -6,6 +6,13 @@ namespace Infrastructure.Data.Repos
 {
     class TransactionRepository : ITransactionRepository
     {
+
+        private MiniBankContext context;
+
+        public TransactionRepository(MiniBankContext ctx)
+        {
+            context = ctx;
+        }
         public Transaction AddTransactionToAccount(Account account, Transaction transaction)
         {
             throw new NotImplementedException();

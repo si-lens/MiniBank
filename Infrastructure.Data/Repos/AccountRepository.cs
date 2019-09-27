@@ -1,12 +1,20 @@
-﻿using MiniBank.Core.DomainService;
+﻿using Microsoft.EntityFrameworkCore;
+using MiniBank.Core.DomainService;
 using MiniBank.Core.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Infrastructure.Data.Repos
 {
     class AccountRepository : IAccountRepository
     {
+        private MiniBankContext context;
+
+        public AccountRepository(MiniBankContext ctx)
+        {
+            context = ctx;
+        }
         public Account AddCustomerToBankAccount(Account account, Customer customer)
         {
             throw new NotImplementedException();
@@ -24,10 +32,10 @@ namespace Infrastructure.Data.Repos
 
         public IEnumerable<Account> GetAllAccounts()
         {
-            throw new NotImplementedException();
+            return context.accounts.AsNoTracking().ToList();
         }
 
-        public Account RemoveAccount(Account account)
+            public Account RemoveAccount(Account account)
         {
             throw new NotImplementedException();
         }

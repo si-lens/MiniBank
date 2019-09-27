@@ -1,11 +1,20 @@
-﻿using MiniBank.Core.DomainService;
+﻿using Microsoft.EntityFrameworkCore;
+using MiniBank.Core.DomainService;
 using MiniBank.Core.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+
 namespace Infrastructure.Data.Repos
 {
     class CustomerRepository : ICustomerRepository
     {
+        private MiniBankContext context;
+
+        public CustomerRepository(MiniBankContext ctx)
+        {
+            context = ctx;
+        }
         public Customer AddBankAccountToCustomer(Account account, Customer customer)
         {
             throw new NotImplementedException();
@@ -18,7 +27,7 @@ namespace Infrastructure.Data.Repos
 
         public IEnumerable<Customer> GetAllCustomers()
         {
-            throw new NotImplementedException();
+            return context.customers.AsNoTracking().ToList();
         }
 
         public Customer GetCustomerWithID(int id)
