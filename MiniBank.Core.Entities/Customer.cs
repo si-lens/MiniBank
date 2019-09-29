@@ -30,5 +30,16 @@ namespace MiniBank.Core.Entities
             customersAccounts.Add(cs);
         }
 
+        public Customer(int id,string firstName,string lastName,DateTime birthDate,string email,string phoneNumber,string address)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDate = birthDate;
+            Email = email;
+            PhoneNumber = phoneNumber;
+            Address = address;
+        }
+
     }
 }

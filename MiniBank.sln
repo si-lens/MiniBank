@@ -9,13 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{21AA1734-1723-44D1-B6E2-F2BA71A61222}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{DAAC6DAC-C966-4439-9627-CE84832DFAA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{DAAC6DAC-C966-4439-9627-CE84832DFAA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBank.Core", "MiniBank.Core\MiniBank.Core.csproj", "{BA27482D-5975-4D37-84B6-06519F994E48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniBank.Core", "MiniBank.Core\MiniBank.Core.csproj", "{BA27482D-5975-4D37-84B6-06519F994E48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBank.Core.Entities", "MiniBank.Core.Entities\MiniBank.Core.Entities.csproj", "{5CF1F870-9684-4BDD-8E98-923FC59A2BED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniBank.Core.Entities", "MiniBank.Core.Entities\MiniBank.Core.Entities.csproj", "{5CF1F870-9684-4BDD-8E98-923FC59A2BED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBank.UI.API", "MiniBank.UI.API\MiniBank.UI.API.csproj", "{70580622-DCBD-4DE0-A3A3-1968D4E5DC32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniBank.UI.API", "MiniBank.UI.API\MiniBank.UI.API.csproj", "{70580622-DCBD-4DE0-A3A3-1968D4E5DC32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{656F2376-3A7D-4EC3-806C-C91A9ADABAD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "EntitiesTest\UnitTests.csproj", "{E2A98AAC-78A4-4544-A281-FD5E9F146B6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{70580622-DCBD-4DE0-A3A3-1968D4E5DC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70580622-DCBD-4DE0-A3A3-1968D4E5DC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70580622-DCBD-4DE0-A3A3-1968D4E5DC32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A98AAC-78A4-4544-A281-FD5E9F146B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A98AAC-78A4-4544-A281-FD5E9F146B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A98AAC-78A4-4544-A281-FD5E9F146B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A98AAC-78A4-4544-A281-FD5E9F146B6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{BA27482D-5975-4D37-84B6-06519F994E48} = {A71D2086-5E98-4C54-8195-82C496CB8F61}
 		{5CF1F870-9684-4BDD-8E98-923FC59A2BED} = {A71D2086-5E98-4C54-8195-82C496CB8F61}
 		{70580622-DCBD-4DE0-A3A3-1968D4E5DC32} = {21AA1734-1723-44D1-B6E2-F2BA71A61222}
+		{E2A98AAC-78A4-4544-A281-FD5E9F146B6B} = {656F2376-3A7D-4EC3-806C-C91A9ADABAD2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9DF9100-A7DD-46E8-9642-0616FB9355A2}
